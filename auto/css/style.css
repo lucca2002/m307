@@ -1,0 +1,21 @@
+.custom-table{
+
+    margin: 30px;
+    width: calc(100% - 60px);
+}
+
+.coloranzeige{
+
+    padding: 10px;
+}
+
+.custom-floating{
+
+    float: right;
+    margin: 20px;
+}
+
+.brand-logo{
+
+    margin: 10px;
+}
