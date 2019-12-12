@@ -11,6 +11,9 @@ if(!file_exists($dbName)){
 
 $sql = "CREATE TABLE IF NOT EXISTS autos (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    neuwagen TEXT NOT NULL,
+    kaufdatum TEXT NOT NULL,
+    getriebe TEXT NOT NULL,
     marke TEXT NOT NULL,
     modell TEXT NOT NULL,
     kraftstoff TEXT NOT NULL,
@@ -22,8 +25,10 @@ $sql = "CREATE TABLE IF NOT EXISTS autos (
 
 $myDB->query($sql);
 
+/*
+
 $sql = "INSERT INTO autos (marke, modell, kraftstoff, farbe, aufbau, hubraum) 
-VALUES ('VW', 'Passat', 'Diesel', '#000000', 'Limousine', 1000)";
+VALUES ('VW', 'off', 'Passat', 'Diesel', '#000000', 'Limousine', 1000)";
 $myDB->query($sql);
 
 $sql = "INSERT INTO autos (marke, modell, kraftstoff, farbe, aufbau, hubraum)  
@@ -33,6 +38,8 @@ $myDB->query($sql);
 $sql = "INSERT INTO autos (marke, modell, kraftstoff, farbe, aufbau, hubraum)  
 VALUES ('VW', 'Passat3', 'Diesel', '#000000', 'Limousine', 1000)";
 $myDB->query($sql);
+
+*/
 
 }
 
@@ -56,9 +63,9 @@ while($res = $result->fetchArray(SQLITE3_ASSOC)){
 }
 
 
-$arraysend['data'] = $arr;
+//$arraysend['data'] = $arr;
 //$arraysend['error'] = array();
 
-echo json_encode($arraysend);
+//echo json_encode($arraysend);
 
 
